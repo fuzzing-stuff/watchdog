@@ -74,6 +74,6 @@ jobs:
 
     - name: Build
       run: |
-        CGO_ENABLED=0 go build -a -v -ldflags "-extldflags '-static'" .
+        go build -a -v .
     - name: Test
       run: go test .
