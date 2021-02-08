@@ -49,9 +49,6 @@ jobs:
     - name: Test
       run: go test .
 
-    - name: Version information
-      run: ./watchdog -version
-
   build-windows:
     name: Build
     runs-on: windows-latest
@@ -99,6 +96,3 @@ jobs:
         CGO_ENABLED=0 go build -a -v -ldflags "-X main.version=$VERSION -extldflags '-static'" .
     - name: Test
       run: go test .
-
-    - name: Version information
-      run: ./watchdog -version
