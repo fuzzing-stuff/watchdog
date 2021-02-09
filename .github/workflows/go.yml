@@ -49,7 +49,8 @@ jobs:
     - name: Test
       run: go test .
     
-    - uses: actions/upload-artifact@v2
+    - name: Upload watchdog artifacts
+      uses: actions/upload-artifact@v2
       with:
         name: watchdog
         path: ./watchdog
@@ -76,7 +77,8 @@ jobs:
       run: |
         go build -a -v .
 
-    - uses: actions/upload-artifact@v2
+    - name: Upload watchdog artifacts
+      uses: actions/upload-artifact@v2
       with:
         name: watchdog
         path: ./watchdog
