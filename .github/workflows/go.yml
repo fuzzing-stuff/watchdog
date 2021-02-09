@@ -52,7 +52,7 @@ jobs:
     - name: Upload watchdog artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: watchdog
+        name: watchdog-linux
         path: ./watchdog
 
   build-windows:
@@ -80,5 +80,5 @@ jobs:
     - name: Upload watchdog artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: watchdog
+        name: watchdog-windows
         path: ./watchdog
