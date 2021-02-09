@@ -48,6 +48,11 @@ jobs:
         CGO_ENABLED=0 go build -a -v -ldflags "-X main.version=$VERSION -extldflags '-static'" .
     - name: Test
       run: go test .
+    
+    - uses: actions/upload-artifact@v2
+      with:
+        name: watchdog
+        path: ./watchdog
 
   build-windows:
     name: Build
@@ -70,3 +75,8 @@ jobs:
     - name: Build
       run: |
         go build -a -v .
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: watchdog
+        path: ./watchdog
