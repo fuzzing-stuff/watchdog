@@ -70,5 +70,3 @@ jobs:
     - name: Build
       run: |
         go build -a -v .
-    - name: Test
-      run: go test .
